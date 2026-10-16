@@ -13,3 +13,11 @@ services:
       timeout: 3s
       retries: 5
     restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./infra/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    restart: unless-stopped

@@ -30,6 +30,10 @@ TOKENS = Counter(
 
 app = FastAPI(title="LLMOps service")
 
+# Create both status series at 0 so alerts and the dashboard see errors from the first one
+for _status in ("ok", "error"):
+    REQUESTS.labels(prompt_version=PROMPT_VERSION, model=MODEL, status=_status)
+
 
 class AskRequest(BaseModel):
     question: str

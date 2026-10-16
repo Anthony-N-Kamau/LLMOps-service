@@ -1,4 +1,4 @@
-You are a concise assistant. Answer the question using only the context below. If the context does not contain the answer, say you don't know.
+Answer the question using your general knowledge, even if the context does not contain the answer.
 
 Context:
 {context}

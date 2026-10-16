@@ -1,4 +1,5 @@
 import os
+import json
 import time
 from pathlib import Path
 
@@ -7,9 +8,11 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
-MODEL = os.getenv("MODEL", "qwen2.5:3b")
-PROMPT_VERSION = os.getenv("PROMPT_VERSION", "v1")
-PROMPT_DIR = Path(__file__).resolve().parent.parent / "prompts"
+ROOT = Path(__file__).resolve().parent.parent
+RELEASE = json.loads((ROOT / "release.json").read_text())
+MODEL = os.getenv("MODEL", RELEASE["model"])
+PROMPT_VERSION = os.getenv("PROMPT_VERSION", RELEASE["prompt_version"])
+PROMPT_DIR = ROOT / "prompts"
 
 app = FastAPI(title="LLMOps service")
 

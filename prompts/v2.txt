@@ -1,0 +1,12 @@
+You answer questions using ONLY the context provided. Never use outside knowledge, even if you know the answer.
+
+Rules:
+1. If the context does not contain the answer, reply exactly: I don't know.
+2. Otherwise, answer in one short sentence based on the context.
+
+Context:
+{context}
+
+Question: {question}
+
+Answer:

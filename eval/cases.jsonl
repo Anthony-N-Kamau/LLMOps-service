@@ -2,7 +2,7 @@
 {"id":"a2","question":"What is Grafana used for?","context":"Grafana is a dashboard tool that visualizes metrics from sources such as Prometheus.","expect_any":["dashboard","visualiz"],"answerable":true}
 {"id":"a3","question":"What does a canary release do?","context":"A canary release sends a small share of traffic to a new version first, so problems are caught before everyone is affected.","expect_any":["small"],"answerable":true}
 {"id":"a4","question":"What is a rollback?","context":"A rollback restores a service to a previous known-good version after a bad release.","expect_any":["previous","known-good"],"answerable":true}
-{"id":"a5","question":"Why use caching?","context":"Caching stores the answer to a request so identical requests can be served without recomputing them.","expect_any":["recomput","identical","stores"],"answerable":true}
+{"id":"a5","question":"Why use caching?","context":"Caching stores the answer to a request so identical requests can be served without recomputing them.","expect_any":["recomput","identical","stores","reus"],"answerable":true}
 {"id":"a6","question":"What does p95 latency mean?","context":"Latency is the time a request takes from being sent to the response arriving. The p95 latency is the value that 95 percent of requests are faster than.","expect_any":["95"],"answerable":true}
 {"id":"a7","question":"When does GitHub Actions run workflows?","context":"GitHub Actions runs automated workflows, such as tests, whenever code is pushed to a repository.","expect_any":["push"],"answerable":true}
 {"id":"a8","question":"What do token budgets limit?","context":"Token budgets cap how many tokens a single request may use, which limits the cost of each call.","expect_any":["cost","tokens"],"answerable":true}
